@@ -14,16 +14,14 @@ class PedidosViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['get'])
     def productos(self, request, pk=None):
         id_pedido = self.kwargs['pk']
-        print('id_pedido', id_pedido)
         try:
             pedido = Pedido.objects.get(pk=id_pedido)
-            print('pedido', pedido)
-            print('pedido.productos', pedido.productos)
             lista_productos = []
-            for producto_id in pedido.productos:
+            for producto_id in pedido.lista_productos:
                 lista_productos.append(Producto.objects.get(pk=producto_id))
             return Response(ProductoSerializer(lista_productos, many=True).data, 
                             status=status.HTTP_200_OK)
-        except Exception:
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
+        except Exception as e:
+            print(e)
+            return Response(None, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
