@@ -16,6 +16,7 @@ Separamos el codigo en ramas, segun las clases desarolladas
 Las distintas secciones estan contenidas en ramas:
 - **mongodb-integration**: Proyecto base de cafeteria integrado con Mongo, con API básica de Productos utilizando ViewSets.
 - **ejemplo-relaciones**: Ejemplo de relaciones en MongoDB: Pedidos y productos.
+- **authentication**: Ejemplo de Autenticacion.
   
 Para cambiar a una rama diferente, utilice el siguiente comando Git:
 `git checkout nombre-rama  `
