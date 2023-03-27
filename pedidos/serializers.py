@@ -5,7 +5,7 @@ import json
 class PedidoSerializer(serializers.ModelSerializer):    
     class Meta:
         model = Pedido
-        fields = ['id', 'lista_productos']
+        fields = ['id', 'mesa', 'lista_productos']
 
     def to_representation(self, instance):
         representation = super().to_representation(instance)
