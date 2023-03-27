@@ -7,4 +7,4 @@ class ProductosViewSet(viewsets.ModelViewSet):
     # Minimamente hay que pasar queryset y serializer_class
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
-    permission_classes = [IsRecepcionista]
+    permission_classes = [IsRecepcionista] # Instancia y retorna la lista de permisos que esta vista requiere

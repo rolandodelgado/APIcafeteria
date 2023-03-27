@@ -5,7 +5,6 @@ from .models import Pedido
 from .serializers import PedidoSerializer
 from productos.models import Producto
 from productos.serializers import ProductoSerializer
-from rest_framework.permissions import AllowAny
 from cafeteria_be.permissions import IsCocinero, IsRecepcionista, IsRecepcionistaOrCocinero
 
 
@@ -19,8 +18,8 @@ class PedidosViewSet(viewsets.ModelViewSet):
             permission_classes = [IsRecepcionistaOrCocinero]
         elif self.action == 'create' or self.action == 'update' or self.action == 'partial_update' or self.action == 'destroy':
             permission_classes = [IsRecepcionista]
-        elif self.action == 'productos':
-            permission_classes = [IsRecepcionista]
+        elif self.action == 'productos': # Endpoint custom
+            permission_classes = [IsRecepcionistaOrCocinero]
         return [permission() for permission in permission_classes]
 
     @action(detail=True, methods=['get'])
