@@ -18,6 +18,7 @@ Las distintas secciones estan contenidas en ramas:
 - **ejemplo-relaciones**: Ejemplo de relaciones en MongoDB: Pedidos y productos.
 - **authentication**: Autenticacion de endpoints con JWT Token.
 - **authentication-with-roles**: Autorizacion de endpoints con JWT Token.
+- **front-end-integration**: Integracion con el proyecto front end, Se agrega CORS, modifica duracion del token para simplificar desarrollo, se creo un nuevo endpoint para obtener la informacion del user. 
   
 Para cambiar a una rama diferente, utilice el siguiente comando Git:
 `git checkout nombre-rama  `
