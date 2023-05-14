@@ -17,7 +17,7 @@ class PedidosViewSet(viewsets.ModelViewSet):
         if self.action == 'retrieve' or self.action == 'list':
             permission_classes = [IsRecepcionistaOrCocinero]
         elif self.action == 'create' or self.action == 'update' or self.action == 'partial_update' or self.action == 'destroy':
-            permission_classes = [IsRecepcionista]
+            permission_classes = [IsRecepcionistaOrCocinero]
         elif self.action == 'productos': # Endpoint custom
             permission_classes = [IsRecepcionistaOrCocinero]
         return [permission() for permission in permission_classes]
