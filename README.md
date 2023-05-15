@@ -8,8 +8,6 @@ Para levantar este proyecto necesitas:
 - MongoDB
 - Conocimientos basicos de Django y DRF
 
- OBS: Antes de crear este proyecto, creamos una API de Peliculas usando Django puro y diferentes implementaciones de DRF. Puedes acceder al codigo de esa clase [aquí](https://github.com/mauri-medina/drf_bootcamp)
-
 # Sobre el codigo:
 Separamos el codigo en ramas, segun las clases desarolladas
 
